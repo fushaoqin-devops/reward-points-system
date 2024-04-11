@@ -66,8 +66,13 @@ public class Result<T> implements Serializable {
         return this;
     }
 
+    // for the purpose of this project, we are returning 200 for all exceptions, actual status code is encapsulated in response
     public static Result errorResult(AppHttpCodeEnum enums){
         return setAppHttpCodeEnum(enums, enums.getErrorMessage());
+    }
+
+    private static Result setAppHttpCodeEnumError(AppHttpCodeEnum enums, String errorMessage) {
+        return errorResult(enums.getCode(), errorMessage);
     }
 
     public static Result errorResult(AppHttpCodeEnum enums, String errorMessage){

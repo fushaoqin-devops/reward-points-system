@@ -1,13 +1,10 @@
 package com.example.rewardpointssystem;
 
-import com.example.rewardpointssystem.common.constant.DateConstants;
-import com.example.rewardpointssystem.common.exception.CustomException;
 import com.example.rewardpointssystem.model.dto.RewardDTO;
 import com.example.rewardpointssystem.model.pojo.Customer;
 import com.example.rewardpointssystem.model.pojo.DateRange;
 import com.example.rewardpointssystem.model.pojo.Transaction;
 import com.example.rewardpointssystem.service.CustomerService;
-import com.example.rewardpointssystem.service.RewardService;
 import com.example.rewardpointssystem.service.TransactionService;
 import com.example.rewardpointssystem.service.impl.RewardServiceImpl;
 import org.junit.jupiter.api.Test;
@@ -16,12 +13,10 @@ import org.mockito.Mock;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
